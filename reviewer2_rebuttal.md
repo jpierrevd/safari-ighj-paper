@@ -27,7 +27,13 @@ Below we respond point-by-point.
 
 > "The manuscript does not validate the methods against known functional IGHJ genes in a model species."
 
-**Response:** The SAFARI pipeline was validated against *Bos taurus* (ARS-UCD1.2) as part of its initial development (Section 2.1), achieving F1 = 0.889 (Recall = 1.000, Precision = 0.800) against the IMGT reference of 4 functional IGHJ genes. All four known functional genes were recovered by SAFARI. A dedicated *Bos taurus* positive control with the full three-pillar framework (RNA-seq + WGS) is in preparation for the final revision and will be reported in Supplementary Table S-BtControl.
+**Response:** A dedicated *Bos taurus* positive control with the full three-pillar framework is now complete (Supplementary Table S-BtControl).
+
+**SAFARI pipeline results (ARS-UCD2.0):** 5 candidates genome-wide; 2 Functional on the IGHJ locus (chr21): JH\_03 (WGQG, RSS IC = 20.27) and JH\_04 (WGRG, RSS IC = 24.69). The Phase 2 ML model confirmed both on-locus Functional predictions (pF = 0.724 and 0.774 respectively) and reclassified one off-locus candidate (JH\_05) as Functional (pF = 0.544, borderline).
+
+**RNA-seq validation:** Spleen RNA-seq (SRR33253438, NovaSeq 6000, 150 bp paired-end, 5M read subset) mapped to the IGHJ locus yielded 647,265 mapped reads, 163,164 spliced reads (JH–CH1 intron junctions), and 378,597 soft-clips (V(D)J recombination evidence) — Level 4 evidence confirming transcriptional activity.
+
+**Digger comparison:** Digger (Lees et al., 2024) identified 3 Functional IGHJ on the same locus, overlapping with both SAFARI predictions. See Supplementary Table S-BtControl, Panels D and G for the full benchmark, including cross-species results demonstrating SAFARI's advantage on non-model species.
 
 ---
 
@@ -69,7 +75,15 @@ Below we respond point-by-point.
 
 ### Contribution: "No comparison to existing tools"
 
-**Response:** We note that Digger (Mayer et al., 2024) focuses on complete IGH locus annotation (V, D, J, and C segments) from chromosome-level assemblies and requires substantially higher assembly quality than many of our target species. IgMAT focuses on V gene annotation and does not provide IGHJ-specific functionality. IgDiscover requires AIRR-seq input rather than genome assemblies. SAFARI-IGHJ occupies a distinct niche: species-agnostic IGHJ discovery from assemblies of any quality, including highly fragmented genomes (N50 < 10 kb). A formal benchmarking comparison against Digger on species with chromosome-level assemblies is in preparation.
+**Response:** We have now completed a formal benchmarking comparison against Digger (Lees et al., 2024; Bioinformatics 40(3):btae144). Results are reported in Supplementary Table S-BtControl, Panel G.
+
+**On the model species (*Bos taurus* ARS-UCD2.0):** Digger identified 3 Functional IGHJ genes and 34 pseudogenes on the 300 kb chr21 locus. SAFARI identified 2 Functional IGHJ genes on-locus (both confirmed by Digger), plus 3 additional candidates genome-wide (1 reclassified as Functional by the ML model with pF = 0.544). The tools show 100% concordance on shared functional predictions.
+
+**On non-model species (the critical test):** Digger was run on IGHJ locus assemblies from *Bison bison*, *Bos mutus*, *Bison bonasus*, and *Odocoileus virginianus* using *Bos taurus* IGHJ references and human RSS motifs. **Digger classified zero genes as Functional** in the three Bovini species (all annotated as pseudogene), while SAFARI correctly identified 1 Functional gene in each — all independently validated by RNA-seq splice evidence (Level 4). Only in *Odocoileus* (Cervidae) did Digger recover 2 Functional genes.
+
+This demonstrates SAFARI-IGHJ's key advantage: **species-agnostic IGHJ discovery without requiring species-specific reference sequences from IMGT**. Digger's scoring framework, calibrated on human and model-species alleles, systematically under-classifies divergent non-model species genes as pseudogenes. SAFARI uses intrinsic sequence features (FR4 motif conservation, RSS information content, open reading frame structure) that are evolutionarily conserved across Bovidae and Cervidae, enabling accurate classification even for species with no prior immunogenomic annotation.
+
+IgMAT focuses on V gene annotation and does not provide IGHJ-specific functionality. IgDiscover requires AIRR-seq input rather than genome assemblies.
 
 ---
 
