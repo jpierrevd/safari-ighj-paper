@@ -1,0 +1,10 @@
+tribe	n_species	mean_functional	sd_functional	counts
+Aepycerotini	1	2.0	0.0	[2]
+Alcelaphini	1	2.0	0.0	[2]
+Antilopini	1	1.0	0.0	[1]
+Bovini	6	3.0	0.816496580927726	[3, 4, 4, 3, 2, 2]
+Caprini	4	2.75	1.299038105676658	[5, 2, 2, 2]
+Cervidae	3	2.0	0.0	[2, 2, 2]
+Hippotragini	5	1.4	0.8	[1, 1, 1, 1, 3]
+Reduncini	1	2.0	0.0	[2]
+Tragelaphini	2	2.5	0.5	[3, 2]

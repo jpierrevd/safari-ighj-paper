@@ -1,0 +1,19 @@
+test	comparison	observed	expected_null	fold_enrichment	statistic	p_value	n_tests	p_bonferroni	p_bh_fdr	significant_bonferroni	significant_fdr
+Binomial (soft-clip enrichment at IGHJ)	saiga_tatarica	239	0.0033	73478x	k=239, n=2819, p0=1.15e-06	0.0	18	0.0	0.0	True	True
+Binomial (soft-clip enrichment at IGHJ)	kobus_ellipsiprymnus	728	0.0009	845419x	k=728, n=775, p0=1.11e-06	0.0	18	0.0	0.0	True	True
+Binomial (soft-clip enrichment at IGHJ)	bos_javanicus	354	0.0005	781087x	k=354, n=423, p0=1.07e-06	0.0	18	0.0	0.0	True	True
+Binomial (soft-clip enrichment at IGHJ)	connochaetes_taurinus	73	0.0003	254651x	k=73, n=258, p0=1.11e-06	0.0	18	0.0	0.0	True	True
+Binomial (soft-clip enrichment at IGHJ)	oryx_dammah	25	0.0008	29559x	k=25, n=733, p0=1.15e-06	6.464715026529978e-103	18	1.1636487047753961e-101	0.0	True	True
+Binomial (soft-clip enrichment at IGHJ)	hippotragus_niger	5	0.0000	108527x	k=5, n=43, p0=1.07e-06	1.3590841163774618e-24	18	2.4463514094794312e-23	0.0	True	True
+Binomial (soft-clip enrichment at IGHJ)	addax_nasomaculatus	4	0.0000	88889x	k=4, n=39, p0=1.15e-06	1.457869944806375e-19	18	2.624165900651475e-18	0.0	True	True
+Binomial (soft-clip enrichment at IGHJ)	elaphurus_davidianus	0	0.0000	0x	k=0, n=7, p0=1.15e-06	1.0	18	1.0	0.0	False	True
+Binomial (RNA-seq enrichment at IGHJ)	odocoileus_virginianus	6953000	461.54	15065x	k=6953000, N_est=400000000, p0=1.15e-06	0.0	18	0.0	0.0	True	True
+Binomial (RNA-seq enrichment at IGHJ)	cervus_elaphus	1627661	264.71	6149x	k=1627661, N_est=300000000, p0=8.82e-07	0.0	18	0.0	0.0	True	True
+Binomial (RNA-seq enrichment at IGHJ)	bos_mutus	1031357	160.71	6417x	k=1031357, N_est=150000000, p0=1.07e-06	0.0	18	0.0	0.0	True	True
+Binomial (RNA-seq enrichment at IGHJ)	bison_bison	469000	277.78	1688x	k=469000, N_est=250000000, p0=1.11e-06	0.0	18	0.0	0.0	True	True
+Binomial (RNA-seq enrichment at IGHJ)	bison_bonasus	327000	51.72	6322x	k=327000, N_est=50000000, p0=1.03e-06	0.0	18	0.0	0.0	True	True
+Spearman (evidence_level vs N50)	all species (n=13)	rho=0.063	rho=0	NA	rho=0.063, n=13	0.8380066197143599	18	1.0	0.0006929945919481727	False	True
+Spearman (evidence_level vs sample_count)	all species (n=13)	rho=0.267	rho=0	NA	rho=0.267, n=13	0.3783081606149476	18	1.0	0.0006929945919481727	False	True
+Mann-Whitney U (IC: Functional > non-Functional)	Functional (n=61) vs non-F (n=86)	median_F=15.8, median_NF=13.6	no difference	1.2x	U=3404	0.0005004960941847914	18	0.009008929695326245	0.0006929945919481727	True	True
+Wilcoxon signed-rank (splice_ratio > 0)	RNA-seq species (n=5)	median_ratio=0.139	ratio=0	NA	W=15	0.03125	18	0.5625	0.04017857142857143	False	True
+Kruskal-Wallis (soft-clips across tribes)	5 tribes	H=5.57	no difference	NA	H=5.57, df=4	0.23352183329305232	18	1.0	0.2802261999516628	False	False
