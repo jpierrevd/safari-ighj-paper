@@ -1,4 +1,0 @@
-comparison	rho	p_value	n
-evidence_level vs log10(N50)	0.06299407883487121	0.8380066197143599	13
-evidence_level vs sample_count	0.2667574502450347	0.3783081606149476	13
-evidence_level vs log10(mapped)	0.9493311975587309	7.2579710532769e-07	13
