@@ -79,9 +79,16 @@ Below we respond point-by-point.
 
 **On the model species (*Bos taurus* ARS-UCD2.0):** Digger identified 3 Functional IGHJ genes and 34 pseudogenes on the 300 kb chr21 locus. SAFARI identified 2 Functional IGHJ genes on-locus (both confirmed by Digger), plus 3 additional candidates genome-wide (1 reclassified as Functional by the ML model with pF = 0.544). The tools show 100% concordance on shared functional predictions.
 
-**On non-model species (the critical test):** Digger was run on IGHJ locus assemblies from *Bison bison*, *Bos mutus*, *Bison bonasus*, and *Odocoileus virginianus* using *Bos taurus* IGHJ references and human RSS motifs. **Digger classified zero genes as Functional** in the three Bovini species (all annotated as pseudogene), while SAFARI correctly identified 1 Functional gene in each — all independently validated by RNA-seq splice evidence (Level 4). Only in *Odocoileus* (Cervidae) did Digger recover 2 Functional genes.
+**Cross-species comparison (SAFARI+ML vs Digger):** We ran both tools on IGHJ locus assemblies from four additional species using *Bos taurus* IGHJ references and human RSS motifs for Digger.
 
-This demonstrates SAFARI-IGHJ's key advantage: **species-agnostic IGHJ discovery without requiring species-specific reference sequences from IMGT**. Digger's scoring framework, calibrated on human and model-species alleles, systematically under-classifies divergent non-model species genes as pseudogenes. SAFARI uses intrinsic sequence features (FR4 motif conservation, RSS information content, open reading frame structure) that are evolutionarily conserved across Bovidae and Cervidae, enabling accurate classification even for species with no prior immunogenomic annotation.
+- *Bison bison*: SAFARI+ML = 0 Functional, Digger = 0 Functional (concordant)
+- *Bos mutus*: SAFARI+ML = 0 Functional (pF = 0.759, overridden by Bovini rules), Digger = 0 Functional (concordant)
+- *Bison bonasus*: **SAFARI+ML = 1 Functional (pF = 0.643), Digger = 0 Functional** — SAFARI+ML's prediction is independently validated by 327,266 RNA-seq mapped reads with splicing evidence (Level 4)
+- *Odocoileus virginianus*: SAFARI+ML = 1 Functional (pF = 0.520), Digger = 2 Functional
+
+The two tools agreed on 3 of 5 species. SAFARI+ML demonstrated a unique advantage in *Bison bonasus*, where Digger classified all J genes as pseudogenes despite RNA-seq evidence confirming transcriptional activity. In *Odocoileus*, Digger's higher sensitivity (2 vs 1 Functional) reflects the cervid's closer evolutionary distance to the *Bos taurus* reference sequences.
+
+**SAFARI-IGHJ's distinct advantages** over Digger are: (1) operation on **fragmented genome assemblies** of any quality (N50 < 10 kb viable), while Digger requires chromosome-level assemblies for full locus annotation; (2) **calibrated classification probabilities** from the ML model rather than binary Functional/Pseudogene calls; (3) integrated **RNA-seq validation** pipeline providing independent in vivo evidence; and (4) intrinsic classification features (FR4 motif, RSS information content, ORF structure) that do not depend on species-specific IMGT reference databases.
 
 IgMAT focuses on V gene annotation and does not provide IGHJ-specific functionality. IgDiscover requires AIRR-seq input rather than genome assemblies.
 

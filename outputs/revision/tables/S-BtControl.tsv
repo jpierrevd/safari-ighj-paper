@@ -24,12 +24,13 @@ E. RNA-seq Validation	Reads sampled	5,000,000 spots (10M reads)	Subset of 44.8M 
 E. RNA-seq Validation	Mapped reads	647,265	Level 4 evidence
 E. RNA-seq Validation	Spliced reads	163,164	JH-CH1 intron junction evidence
 E. RNA-seq Validation	Soft-clips	378,597	V(D)J recombination evidence
-G. Cross-species Digger Comparison	Bos taurus (control)	Digger: 3F / SAFARI: 2F (on-locus)	Both tools work on model species
-G. Cross-species Digger Comparison	Bison bison	Digger: 0F / SAFARI: 1F	Digger fails — all classified as pseudo
-G. Cross-species Digger Comparison	Bos mutus (Yak)	Digger: 0F / SAFARI: 1F	Digger fails — all classified as pseudo
-G. Cross-species Digger Comparison	Bison bonasus	Digger: 0F / SAFARI: 1F	Digger fails — all classified as pseudo
-G. Cross-species Digger Comparison	Odocoileus virginianus	Digger: 2F / SAFARI: 1F	Digger partially works (cervid divergence from cattle refs)
-G. Cross-species Digger Comparison	Key Finding	SAFARI works without species-specific refs	Digger requires IMGT references from closely related species
+G. Cross-species Comparison	Bos taurus (control)	SAFARI+ML: 3F / Digger: 3F	Concordant (2 shared on-locus, each has 1 different)
+G. Cross-species Comparison	Bison bison	SAFARI+ML: 0F / Digger: 0F	Concordant — both conservative on this species
+G. Cross-species Comparison	Bos mutus (Yak)	SAFARI+ML: 0F (pF=0.759 overridden) / Digger: 0F	Concordant — ML Bovini rules override high pF
+G. Cross-species Comparison	Bison bonasus	SAFARI+ML: 1F (pF=0.643) / Digger: 0F	SAFARI+ML advantage — validated by 327K RNA-seq mapped reads
+G. Cross-species Comparison	Odocoileus virginianus	SAFARI+ML: 1F (pF=0.520) / Digger: 2F	Digger advantage — cervid closer to cattle refs
+G. Cross-species Comparison	Agreement rate	3/5 species concordant	SAFARI+ML unique advantage in Bison bonasus (RNA-seq validated)
+G. Cross-species Comparison	SAFARI advantages	Works on fragmented genomes; calibrated probabilities; RNA-seq integration	Digger requires chromosome-level assemblies + species-specific IMGT refs
 F. Summary	SAFARI+ML Functional (total)	3	JH_03 + JH_04 (on-locus) + JH_05 (off-locus, pF=0.544)
 F. Summary	SAFARI+ML Functional (on-locus)	2	JH_03, JH_04
 F. Summary	Digger Functional	3	Positions: 77748, 206755, 207674
