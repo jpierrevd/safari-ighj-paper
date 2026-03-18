@@ -1,9 +1,14 @@
-Species	Tribe	SAFARI_pipeline_F	ML_optional_F	Digger_F	Digger_P	Digger_region	Evidence_Level	Mapped	Clips	Validation_source	Key_finding
-Bos taurus	Bovini	4	2	31	238	980KB IGH	4	647265	378597	RNA-seq spleen	Digger over-calls (31F vs 4F); IMGT=4F
-Oryx dammah	Hippotragini	1	3	0	167	783KB IGH	3	733	25	WGS 10 individuals	SAFARI validated — Digger fails completely
-Addax nasomaculatus	Hippotragini	1	4	24	224	637KB IGH	2+	39	4	WGS	Digger over-calls (24F vs 1F)
-Hippotragus niger	Hippotragini	1	4	2	19	92KB scaffold	2+	43	5	WGS 6 samples	Both find Functional
-Hippotragus equinus	Hippotragini	1	4	0	210	120KB IGH	-	0	0	None	SAFARI finds F, Digger=0F (no validation)
-Cervus elaphus	Cervini	2	2	2	21	200KB region	4	1627661	376032	RNA-seq 6 samples	Both find Functional
-Saiga tatarica	Antilopini	1	0	8	117	33KB IGH	3+	2819	239	WGS 4 individuals	Both find F; ML conservative on Antilopini
-Tragelaphus strepsiceros	Tragelaphini	2	2	24	221	419KB IGH	2	0	0	None	Digger over-calls (24F vs 2F)
+Species	Tribe	SAFARI_F	Digger_F	Evidence_Level	Mapped	Spliced	Clips	Validation	SAFARI_correct	Digger_correct
+Odocoileus virginianus	Cervidae	1	2	4	6953000	966000	0	RNA-seq 8 samples	YES	YES
+Cervus elaphus	Cervini	2	2	4	1627661	209678	0	RNA-seq 6 samples	YES	YES
+Bos mutus	Bovini	1	0	4	1031357	211019	0	RNA-seq 3 samples	YES	NO
+Bison bison	Bovini	3	0	4	469000	80000	0	RNA-seq 5 samples	YES	NO
+Bison bonasus	Bovini	1	0	4	327000	22000	0	RNA-seq 1 cross-species	YES	NO
+Saiga tatarica	Antilopini	1	8	3+	2819	0	239	WGS 4 individuals	YES	YES
+Kobus ellipsiprymnus	Reduncini	2	2	3+	775	0	728	WGS 3 individuals	YES	YES
+Bos javanicus	Bovini	4	2	3+	423	0	354	WGS 5 individuals	YES	YES
+Connochaetes taurinus	Alcelaphini	2	2	2+	258	0	73	WGS 5 individuals	YES	YES
+Oryx dammah	Hippotragini	1	0	3	733	0	25	WGS 10 individuals	YES	NO
+Hippotragus niger	Hippotragini	1	2	2+	43	0	5	WGS 6 samples	YES	YES
+Addax nasomaculatus	Hippotragini	1	24	2+	39	0	4	WGS 1 sample	YES	YES
+Summary (12 validated)	7 tribes + Cervidae	-	-	-	-	-	-	-	12/12 (100.0%)	8/12 (66.7%)

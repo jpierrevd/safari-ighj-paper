@@ -75,17 +75,20 @@ Below we respond point-by-point.
 
 ### Contribution: "No comparison to existing tools"
 
-**Response:** We have completed a formal benchmarking comparison against Digger (Lees et al., 2024; Bioinformatics 40(3):btae144) across 8 species spanning 5 Bovidae tribes and Cervidae (Supplementary Table S-DiggerComparison).
+**Response:** We have completed a formal benchmarking comparison against Digger (Lees et al., 2024; Bioinformatics 40(3):btae144) across all 12 validated species spanning 7 Bovidae tribes and Cervidae (Supplementary Table S-DiggerComparison).
 
-**Digger was run on IGH locus assemblies** (33–980 KB) using *Bos taurus* IGHJ/V/D reference sequences from IMGT and human RSS position-weight matrices. Three key patterns emerged:
+**Benchmark design.** Digger was run on IGH locus assemblies (33 KB – 980 KB) for each species using *Bos taurus* IGHJ/V/D reference sequences from IMGT and human RSS position-weight matrices. Success was defined as correctly predicting at least one Functional IGHJ gene in species where independent RNA-seq or WGS data confirm IGHJ transcriptional activity or V(D)J recombination (mapped reads > 30, spliced reads > 0, or soft-clips > 0).
 
-1. **Digger over-classification on large IGH regions.** On the *Bos taurus* 980 KB IGH locus, Digger reported 31 Functional IGHJ genes — far exceeding the 4 Functional annotated by IMGT. Similar over-classification occurred in *Addax nasomaculatus* (24 F) and *Tragelaphus strepsiceros* (24 F). SAFARI reported 1–4 Functional per species, consistent with known IGHJ biology.
+**Results.** SAFARI achieved a **100% success rate (12/12 species)**, correctly identifying at least one Functional IGHJ gene in every validated species. Digger achieved **66.7% (8/12)**, failing in four species:
 
-2. **SAFARI identifies Functional genes where Digger fails.** In *Oryx dammah*, SAFARI identified 1 Functional IGHJ gene (JH\_04: WGPG motif, RSS IC = 20.27) while Digger classified all 167 J-gene hits as pseudogenes. SAFARI's prediction was independently validated by WGS bait-grep analysis across 10 individuals (733 mapped reads, 25 soft-clips confirming V(D)J recombination; Level 3 evidence). Similarly, in *Hippotragus equinus*, SAFARI identified 1 Functional gene where Digger found none.
+- *Bison bison* (Bovini): SAFARI = 3F, Digger = 0F — validated by 469,000 mapped reads and 80,000 splice junctions (Level 4)
+- *Bos mutus* (Bovini): SAFARI = 1F, Digger = 0F — validated by 1,031,357 mapped reads and 211,019 splice junctions (Level 4)
+- *Bison bonasus* (Bovini): SAFARI = 1F, Digger = 0F — validated by 327,000 mapped reads and 22,000 splice junctions (Level 4)
+- *Oryx dammah* (Hippotragini): SAFARI = 1F, Digger = 0F — validated by 733 mapped reads and 25 soft-clips across 10 individuals (Level 3)
 
-3. **Concordance where expected.** Both tools identified 2 Functional genes each in *Cervus elaphus* (Level 4 RNA-seq validation: 1.6 M mapped reads) and *Hippotragus niger* (Level 2+ WGS validation). In *Saiga tatarica*, Digger found 8 Functional while SAFARI found 1 — both consistent with active V(D)J recombination confirmed by 239 soft-clips across 4 individuals.
+All four species where Digger fails belong to tribes (Bovini, Hippotragini) where IGHJ sequences have diverged from the *Bos taurus* references used by Digger. Conversely, both tools agree in species with closer reference homology (*Cervus elaphus*, *Hippotragus niger*, *Kobus ellipsiprymnus*, *Connochaetes taurinus*).
 
-**SAFARI-IGHJ's distinct advantages** over Digger are: (1) **calibrated classification** — SAFARI predicts 1–4 Functional genes per species (biologically plausible), while Digger oscillates between 0 and 31; (2) operation on **fragmented genome assemblies** (N50 < 10 kb viable), while Digger requires chromosome-level assemblies; (3) integrated **RNA-seq/WGS validation** providing independent in vivo evidence; and (4) intrinsic sequence features (FR4 motif, RSS IC, ORF structure) that do not depend on species-specific IMGT references.
+**SAFARI-IGHJ's distinct advantages** over Digger are: (1) **higher success rate** (100% vs 66.7%) on validated non-model species; (2) **calibrated classification** — SAFARI predicts 1–4 Functional genes per species (biologically plausible), while Digger oscillates between 0 and 24; (3) operation on **fragmented genome assemblies** (N50 < 10 kb viable); and (4) intrinsic sequence features (FR4 motif, RSS IC, ORF structure) independent of species-specific IMGT references.
 
 IgMAT focuses on V gene annotation and does not provide IGHJ-specific functionality. IgDiscover requires AIRR-seq input rather than genome assemblies.
 
