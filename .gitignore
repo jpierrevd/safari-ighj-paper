@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.bam
+*.bam.bai
+*.fastq.gz
+*.sra

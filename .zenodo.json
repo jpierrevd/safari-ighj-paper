@@ -1,0 +1,46 @@
+{
+  "title": "SAFARI-IGHJ: From Computational Prediction to In Vivo Proof — Code, Data, and Validation Scripts",
+  "description": "Source code for the SAFARI-IGHJ pipeline (v1 and v2), SAFARI-Score ML classifier, V(D)J validation framework, and all analysis scripts associated with the manuscript 'From Computational Prediction to In Vivo Proof: Large-Scale Validation of SAFARI-IGHJ Across 11.4 Million Reads Confirms Immunoglobulin J Gene Functionality in Wild Ruminants'. Includes validation BAM files from 13 species across 7 Bovidae tribes.",
+  "upload_type": "software",
+  "publication_type": "article",
+  "creators": [
+    {
+      "name": "Correia, Jean Pierre",
+      "orcid": "0009-0004-3566-3987",
+      "affiliation": "Digital Balance AI -- Digital Labs Independent Research Group"
+    }
+  ],
+  "keywords": [
+    "IGHJ gene segments",
+    "Bovidae",
+    "Cervidae",
+    "V(D)J recombination",
+    "immunogenomics",
+    "conservation genomics",
+    "bioinformatics pipeline",
+    "RNA-seq validation",
+    "whole-genome sequencing",
+    "SAFARI-IGHJ"
+  ],
+  "license": {
+    "id": "MIT"
+  },
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "10.1186/s12864-026-XXXXX",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "immunoinformatics"
+    },
+    {
+      "identifier": "conservation-genomics"
+    }
+  ],
+  "notes": "This release accompanies the manuscript submitted to BMC Genomics. Validation BAM files (>2 GB total) are available as separate Zenodo uploads due to size constraints."
+}
