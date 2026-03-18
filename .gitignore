@@ -5,3 +5,5 @@ __pycache__/
 *.bam.bai
 *.fastq.gz
 *.sra
+SAFARI_Manuscript_FinalDraft.md
+references.bib
