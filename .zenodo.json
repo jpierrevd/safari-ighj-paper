@@ -1,6 +1,6 @@
 {
-  "title": "SAFARI-IGHJ: From Computational Prediction to In Vivo Proof — Code, Data, and Validation Scripts",
-  "description": "Source code for the SAFARI-IGHJ pipeline (v1 and v2), SAFARI-Score ML classifier, V(D)J validation framework, and all analysis scripts associated with the manuscript 'From Computational Prediction to In Vivo Proof: Large-Scale Validation of SAFARI-IGHJ Across 11.4 Million Reads Confirms Immunoglobulin J Gene Functionality in Wild Ruminants'. Includes validation BAM files from 13 species across 7 Bovidae tribes.",
+  "title": "SAFARI-IGHJ: SAFARI-Score ML Classifier and Validation Framework — Code and Data",
+  "description": "SAFARI-Score sklearn ML classifier for IGHJ gene classification, training data (147 candidates, 21 species), gold standard labels (8 species from IMGT), LOOCV results, and Bos taurus positive control script. Associated with the manuscript 'From Computational Prediction to Transcriptomic and Genomic Evidence: Large-Scale Validation of SAFARI-IGHJ Across 11.4 Million Reads Confirms Immunoglobulin J Gene Functionality in Wild Ruminants'.",
   "upload_type": "software",
   "publication_type": "article",
   "creators": [
