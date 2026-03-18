@@ -1,0 +1,9 @@
+Species	Tribe	SAFARI_pipeline_F	ML_optional_F	Digger_F	Digger_P	Digger_region	Evidence_Level	Mapped	Clips	Validation_source	Key_finding
+Bos taurus	Bovini	4	2	31	238	980KB IGH	4	647265	378597	RNA-seq spleen	Digger over-calls (31F vs 4F); IMGT=4F
+Oryx dammah	Hippotragini	1	3	0	167	783KB IGH	3	733	25	WGS 10 individuals	SAFARI validated — Digger fails completely
+Addax nasomaculatus	Hippotragini	1	4	24	224	637KB IGH	2+	39	4	WGS	Digger over-calls (24F vs 1F)
+Hippotragus niger	Hippotragini	1	4	2	19	92KB scaffold	2+	43	5	WGS 6 samples	Both find Functional
+Hippotragus equinus	Hippotragini	1	4	0	210	120KB IGH	-	0	0	None	SAFARI finds F, Digger=0F (no validation)
+Cervus elaphus	Cervini	2	2	2	21	200KB region	4	1627661	376032	RNA-seq 6 samples	Both find Functional
+Saiga tatarica	Antilopini	1	0	8	117	33KB IGH	3+	2819	239	WGS 4 individuals	Both find F; ML conservative on Antilopini
+Tragelaphus strepsiceros	Tragelaphini	2	2	24	221	419KB IGH	2	0	0	None	Digger over-calls (24F vs 2F)
